@@ -2,10 +2,9 @@ package info.upump.jym.db
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import info.upump.jym.db.entities.TestEntity
 
 
-@Database(version = 1, entities = [TestEntity::class])
+@Database(version = 1, entities = [])
 abstract class RoomDB : RoomDatabase() {
     companion object {
         const val BASE_NAME = "jym.db"
