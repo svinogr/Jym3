@@ -15,11 +15,6 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-        val file = File(RoomDB.DB_PATH)
-        if (!file.exists()) {
-            Log.d(TAG, "file isnt exist")
-            setDbFromAsset()
-        }
 
         try {
             Thread.sleep(1000)
@@ -33,9 +28,4 @@ class SplashActivity : AppCompatActivity() {
         finish()
     }
 
-    private fun setDbFromAsset() {
-        Room.databaseBuilder(applicationContext, RoomDB::class.java, RoomDB.BASE_NAME)
-            .createFromAsset(RoomDB.BASE_NAME)
-            .build()
-    }
 }

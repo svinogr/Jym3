@@ -1,13 +1,19 @@
 package info.upump.jym
 
 import android.os.Bundle
+import android.util.Log
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import info.upump.jym.databinding.ActivityMainBinding
+import info.upump.jym.db.entities.CycleEntity
+import info.upump.jym.db.repo.CycleRepo
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 
 class MainActivity : AppCompatActivity() {
@@ -32,5 +38,25 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        val item = CycleEntity(0)
+
+
+         // get.save(item)
+
+      lifecycleScope.launch(Dispatchers.IO){
+          val get = CycleRepo.get()
+          val list = get.getAll()
+          Log.d("TAG", "${list.size}")
+          for (it in list) {
+              Log.d("TAG", "${it.comment}")
+
+          }
+
+      }
+
+
+
+
     }
 }
