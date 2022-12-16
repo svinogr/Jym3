@@ -12,6 +12,7 @@ import androidx.navigation.ui.setupWithNavController
 import info.upump.jym.databinding.ActivityMainBinding
 import info.upump.jym.db.entities.CycleEntity
 import info.upump.jym.db.repo.CycleRepo
+import info.upump.jym.db.repo.WorkoutRepo
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -42,21 +43,27 @@ class MainActivity : AppCompatActivity() {
         val item = CycleEntity(0)
 
 
-         // get.save(item)
+        // get.save(item)
 
-      lifecycleScope.launch(Dispatchers.IO){
-          val get = CycleRepo.get()
-          val list = get.getAll()
-          Log.d("TAG", "${list.size}")
-          for (it in list) {
-              Log.d("TAG", "${it.comment}")
+        lifecycleScope.launch(Dispatchers.IO) {
+            val get = CycleRepo.get()
+            val list = get.getAll()
+            Log.d("TAG", "${list.size}")
+         /*   for (it in list) {
+                Log.d("TAG", "${it.comment}")
 
-          }
+            }
+*/
+            val w = WorkoutRepo.get()
+            val list2 = w.getAll()
+            Log.d("TAG", "${list2.size}")
+            for (it in list2) {
+                Log.d("TAG", "${it.comment}")
 
-      }
+
+            }
 
 
-
-
+        }
     }
 }
