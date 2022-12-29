@@ -1,9 +1,7 @@
 package info.upump.jym.db.repo
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.util.Log
-import androidx.lifecycle.LiveData
 import androidx.room.Room
 import info.upump.jym.TAG
 import info.upump.jym.db.RepoActions
