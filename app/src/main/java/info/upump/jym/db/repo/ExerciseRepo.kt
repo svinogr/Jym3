@@ -26,7 +26,7 @@ class ExerciseRepo private constructor(private val context: Context) : RepoActio
         return exerciseRepo.getAll()
     }
 
-    override fun save(item: ExerciseEntity) {
+    override fun save(item: ExerciseEntity): ExerciseEntity {
         TODO("Not yet implemented")
     }
 

@@ -4,7 +4,6 @@ import android.content.Context
 import info.upump.jym.App
 import info.upump.jym.db.RepoActions
 import info.upump.jym.db.entities.ExerciseDescriptionEntity
-import info.upump.jym.db.entities.ExerciseEntity
 import info.upump.jym.models.ExerciseDescription
 
 class ExerciseDescriptionRepo private constructor(private val context: Context): RepoActions<ExerciseDescriptionEntity> {
@@ -28,7 +27,7 @@ class ExerciseDescriptionRepo private constructor(private val context: Context):
       return exerciseDescriptionRepo.getAll()
     }
 
-    override fun save(item: ExerciseDescriptionEntity) {
+    override fun save(item: ExerciseDescriptionEntity): ExerciseDescriptionEntity {
         TODO("Not yet implemented")
     }
 }

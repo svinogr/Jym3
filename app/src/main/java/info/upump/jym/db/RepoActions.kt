@@ -4,5 +4,5 @@ import androidx.lifecycle.LiveData
 
 interface RepoActions<T> {
     fun getAll(): List<T>
-    fun save(item: T)
+    fun save(item: T): T
 }

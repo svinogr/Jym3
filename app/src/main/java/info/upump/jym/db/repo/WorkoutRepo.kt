@@ -33,8 +33,7 @@ class WorkoutRepo(private val context: Context) : RepoActions<WorkoutEntity> {
         return workoutDao.getAllWorkouts()
     }
 
-    override fun save(item: WorkoutEntity) {
+    override fun save(item: WorkoutEntity): WorkoutEntity {
         TODO("Not yet implemented")
     }
-
 }
