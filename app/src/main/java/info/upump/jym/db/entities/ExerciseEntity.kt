@@ -4,28 +4,25 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "workouts")
-data class WorkoutEntity(
+@Entity(tableName = "exercises")
+data class ExerciseEntity(
     @PrimaryKey(autoGenerate = true)
     var _id: Long
 ) {
     @ColumnInfo
-    var title: String = ""
-
-    @ColumnInfo
     var comment: String? = ""
 
     @ColumnInfo
-    var week_even: Int = 0
+    var description_id: Long? = 0
+
+    @ColumnInfo
+    var type_exercise: String? = ""
 
     @ColumnInfo
     var default_type: Int = 0
 
-    @ColumnInfo
+    @ColumnInfo()
     var template: Int = 0
-
-    @ColumnInfo
-    var day: String? = ""
 
     @ColumnInfo
     var start_date: String = ""

@@ -11,8 +11,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import info.upump.jym.databinding.ActivityMainBinding
 import info.upump.jym.db.entities.CycleEntity
-import info.upump.jym.db.repo.CycleRepo
-import info.upump.jym.db.repo.WorkoutRepo
+import info.upump.jym.db.repo.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -49,21 +48,44 @@ class MainActivity : AppCompatActivity() {
             val get = CycleRepo.get()
             val list = get.getAll()
             Log.d("TAG", "${list.size}")
-         /*   for (it in list) {
-                Log.d("TAG", "${it.comment}")
+            /*   for (it in list) {
+                   Log.d("TAG", "${it.comment}")
 
-            }
-*/
+               }
+   */
             val w = WorkoutRepo.get()
             val list2 = w.getAll()
             Log.d("TAG", "${list2.size}")
             for (it in list2) {
-                Log.d("TAG", "${it.comment}")
+       //         Log.d("TAG", "${it.comment}")
 
 
             }
 
+            val e = ExerciseRepo.get()
+            val list3 = e.getAll()
 
+            Log.d("TAG", "${list3.size}")
+            for (it in list3) {
+            //    Log.d("TAG", "${it.title}")
+
+            }
+
+            val r = ExerciseDescriptionRepo.get()
+            val list4 = r.getAll()
+
+            Log.d("TAG", "${list4.size}")
+            for (it in list4) {
+                Log.d("TAG", "${it.title}")
+            }
+
+            val t = SetsRepo.get()
+            val list5 = t.getAll()
+
+            Log.d("TAG", "${list5.size}")
+            for (it in list5) {
+                Log.d("TAG", "${it.reps}")
+            }
         }
     }
 }
