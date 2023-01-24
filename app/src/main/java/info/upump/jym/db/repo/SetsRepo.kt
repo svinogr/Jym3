@@ -4,6 +4,7 @@ import android.content.Context
 import info.upump.jym.App
 import info.upump.jym.db.RepoActions
 import info.upump.jym.db.entities.SetsEntity
+import info.upump.jym.models.Sets
 
 class SetsRepo private constructor(private var context: Context) : RepoActions<SetsEntity> {
     private val setsDao = App.db.setsDao()
@@ -26,7 +27,7 @@ class SetsRepo private constructor(private var context: Context) : RepoActions<S
         return setsDao.getAll()
     }
 
-    override fun save(item: SetsEntity) {
+    override fun save(item: SetsEntity): SetsEntity {
         TODO("Not yet implemented")
     }
 }
