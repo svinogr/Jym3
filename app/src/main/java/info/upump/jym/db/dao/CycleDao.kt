@@ -11,5 +11,5 @@ interface CycleDao {
     fun getAllCycles(): List<CycleEntity>
 
     @Insert
-    fun save(item: CycleEntity)
+    fun save(item: CycleEntity): Long
 }

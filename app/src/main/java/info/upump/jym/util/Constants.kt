@@ -1,0 +1,56 @@
+package info.upump.jym.util
+
+object Constants {
+    const val URI_IMG = "uri_image"
+    const val FINISH_DATA = "finish data"
+    const val START_DATA = "start data"
+    const val ID = "id"
+    const val PARENT_ID = "parent id"
+    const val DESCRIPTION = "description"
+    const val ID_DESCRIPTION = "description id"
+    const val WEEK_EVEN = "week even"
+    const val DEFAULT_TYPE_ITEM = "def type"
+    const val TEMPLATE_TYPE_ITEM = "tem type"
+    const val IMAGE = "image"
+    const val DEFAULT_IMAGE = "def img"
+    const val TYPE_MUSCLE = "type muscle"
+    const val TYPE_USER_PROGRESS = "type user progress"
+    const val TITLE = "title"
+    const val WEIGHT = "weight"
+    const val PAST_WEIGHT = "past_weight"
+    const val QUANTITY_SETS = "quantity"
+    const val REPS = "reps"
+    const val QUANTITY = "quantity"
+    const val FAT = "fat"
+    const val NECK = "neck"
+    const val SHOULDERS = "shoulders"
+    const val PECTORAL = "pectoral"
+    const val R_BICEPS = "r biceps"
+    const val L_BICEPS = "l biceps"
+    const val ABS = "abs"
+    const val R_LEG = "r leg"
+    const val L_LEG = "l leg"
+    const val R_CALVES = "r calves"
+    const val L_CALVES = "l calves"
+    const val REQUEST_CODE_GALLERY_PHOTO = 10
+    const val REQUEST_CODE_CHOOSE = 100
+    const val REQUEST_CODE_CREATE = 1000
+    const val REQUEST_CODE_DELETE = 50
+    const val REQUEST_CODE_CHANGE_OPEN = 55
+    const val UPDATE_DELETE = "update delete"
+    const val DAY = "day"
+    const val COMMENT = "comment"
+    const val LOADER_BY_PARENT_ID = 1
+    const val LOADER_BY_TEMPLATE_TYPE = 2
+    const val LOADER_BY_USER_TYPE = 3
+    const val LOADER_BY_DEFAULT_TYPE = 4
+    const val DEFAULT_TYPE = 8
+    const val NOW_TIME_SET = 3
+    const val USER_TYPE = 9
+    const val DEFAULT_TYPE_CHOOSE = 5
+    const val UPDATE = 6
+    const val DELETE = 7
+    const val CREATE = 8
+    const val ERROR = 404
+    const val CLEAR = 9
+}

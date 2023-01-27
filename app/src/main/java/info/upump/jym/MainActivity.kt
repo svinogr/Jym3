@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
+                R.id.cycleFragment, R.id.navigation_dashboard, R.id.navigation_notifications
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -43,16 +43,16 @@ class MainActivity : AppCompatActivity() {
 
 
         // get.save(item)
-
+/*
         lifecycleScope.launch(Dispatchers.IO) {
             val get = CycleRepo.get()
             val list = get.getAll()
             Log.d("TAG", "${list.size}")
-            /*   for (it in list) {
+            *//*   for (it in list) {
                    Log.d("TAG", "${it.comment}")
 
                }
-   */
+   *//*
             val w = WorkoutRepo.get()
             val list2 = w.getAll()
             Log.d("TAG", "${list2.size}")
@@ -85,7 +85,7 @@ class MainActivity : AppCompatActivity() {
             Log.d("TAG", "${list5.size}")
             for (it in list5) {
                 Log.d("TAG", "${it.reps}")
-            }
-        }
+            }*/
+
     }
 }

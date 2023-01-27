@@ -32,7 +32,8 @@ class CycleRepo private constructor(private val context: Context) : RepoActions<
     }
 
     override fun save(item: CycleEntity): CycleEntity {
-       return cycleDao.save(item)
+        val newId  = cycleDao.save(item)
+        return item.apply { _id = newId }
     }
 
 }
